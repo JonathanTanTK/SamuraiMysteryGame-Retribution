@@ -21,7 +21,13 @@ func unregister_area(area: InteractionArea):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	Dialogic.signal_event.connect(dialogic_signal)
+
+func dialogic_signal(arg: String):
+	if arg == "exit_dialog":
+		can_interact = true
+		label.show()
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -35,18 +41,17 @@ func _process(delta: float) -> void:
 	else:
 		label.hide()
 		
-	pass
 
 func _sort_by_distance_to_player(area1, area2):
 	var area1_to_player = player.global_position.distance_to(area1.global_position)
 	var area2_to_player = player.global_position.distance_to(area2.global_position)
 	return area1_to_player < area2_to_player
 	
+	
 func _input(event):
 	if event.is_action_pressed("interact") && can_interact:
 		if active_areas.size() > 0:
+			print("in the if statement")
 			can_interact = false
 			label.hide()
-			
-			await active_areas[0].interact.call()
-			can_interact = true
+			# will be reactivated when signal is received

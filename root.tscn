@@ -190,7 +190,11 @@ format = 2
 layer_0/tile_data = PackedInt32Array(65530, 1114112, 4, 65531, 1179648, 4, 65532, 1245184, 4, 65533, 1114112, 4, 65534, 1179648, 4, 65535, 1245184, 4, 0, 1114112, 4, 1, 1179648, 4, 2, 1245184, 4, 3, 1114112, 4, 4, 1179648, 4, 5, 1245184, 4, -131072, 1114112, 1, -131071, 1179648, 1, -131070, 1245184, 1, -65542, 1114112, 1, -65541, 1179648, 1, -65540, 1245184, 1, 10, 393216, 0, 11, 458752, 0, 12, 524288, 0, 6, 1114112, 4, 7, 1179648, 4, 8, 1245184, 4, -131074, 983040, 0, -65538, 983040, 1, -2, 983040, 2, -196604, 983040, 0, -131068, 983040, 1, -65532, 983040, 2)
 
 [node name="PlayerCharacterBody2D" parent="." instance=ExtResource("2_5o7vr")]
-position = Vector2(-56, -5)
+position = Vector2(0, -5)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacterBody2D"]
+position = Vector2(0, -20)
+zoom = Vector2(3, 3)
 
 [node name="TestPerson" parent="." instance=ExtResource("3_rrt7n")]
 position = Vector2(109, -21)
