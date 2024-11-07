@@ -1,3 +1,4 @@
+set {conversations} = 0
 bar_owner: Morning Ronin, haven't seen you around. You must be new here.
 player_detective: Indeed, sir. I'm here for the murder case of the village elder.
 bar_owner: My, my, word does spread fast around these parts.
@@ -5,14 +6,13 @@ bar_owner: I didn't expect a Ronin like you to be sent here to deal with this ob
 player_detective: I was assigned to this case on a whim. But I must say I am not familiar with this village nor its residents...
 bar_owner: Well you gotta start somewhere, son.
 bar_owner: I suggest you go ask that drunkard over on that table. \
-\
 I heard that he was the one who was closest to the crime scene and that he might've saw the crime happened right before his eyes...
 bar_owner: If he actually opened his eyes...
 player_detective: What do you mean?
 bar_owner: Well he's known for not just being a drunkard, but also a coward. So he only saw a glimpse of what happened before closing his eyes and hiding near the crime scene as it all happened.
 bar_owner: He's now drowning out his sorrows after being that close in witnessing the murder.
 bar_owner: You could try to ask him about what happened that night. Though, I'm not sure if he's in a state to be answering trauma-invoking questions...
-[wait time="1.5"]
+[wait time="0.1"]
 bar_owner: He usually sobers up after a day or two. Maybe he'll be more helpful then.
 player_detective: Thank you, sir.
 bar_owner: Best of luck, Ronin...\

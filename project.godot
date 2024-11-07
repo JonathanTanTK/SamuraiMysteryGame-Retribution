@@ -24,15 +24,19 @@ InteractionManager="*res://scenes/interaction_manager.tscn"
 
 directories/dch_directory={
 "bar_owner": "res://addons/characters_dialog/bar_owner.dch",
+"drunk": "res://addons/characters_dialog/drunk.dch",
 "player_detective": "res://addons/characters_dialog/player_detective.dch"
 }
 directories/dtl_directory={
+"drinker": "res://addons/dialogic/Timelines/drinker.dtl",
 "test_timelines": "res://addons/dialogic/Timelines/test_timelines.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
-variables={}
+variables={
+"conversations": 0
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

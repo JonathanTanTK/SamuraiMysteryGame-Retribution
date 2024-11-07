@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsd5akapfh2nv"]
+
+[ext_resource type="Texture2D" uid="uid://4vtud2tubtsc" path="res://Main Characters/drinker.PNG" id="1_u666b"]
+[ext_resource type="PackedScene" uid="uid://o07usxldyyg5" path="res://scenes/interaction_area.tscn" id="2_0b8p7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uyvu7"]
+
+[node name="Drinker" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_u666b")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_0b8p7")]
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_uyvu7")
