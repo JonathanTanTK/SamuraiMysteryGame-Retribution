@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2vu2bdpwgjas"]
+[gd_scene load_steps=11 format=3 uid="uid://c2vu2bdpwgjas"]
 
 [ext_resource type="Texture2D" uid="uid://d1hb1wmio21y1" path="res://tilemaps/preview.png" id="1_dror1"]
 [ext_resource type="PackedScene" uid="uid://bccel1i5pgqhh" path="res://scenes/Player.tscn" id="2_5o7vr"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cj5khkbhgdpt7" path="res://scenes/plant.tscn" id="3_yku4t"]
 [ext_resource type="PackedScene" uid="uid://bsd5akapfh2nv" path="res://scenes/drinker.tscn" id="5_7whmr"]
 [ext_resource type="Script" path="res://scripts/drinker.gd" id="6_2dcx3"]
+[ext_resource type="PackedScene" uid="uid://cikc3b6a0mens" path="res://scenes/levelChangeArea.tscn" id="8_h4a6q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5l26m"]
 texture = ExtResource("1_dror1")
@@ -965,9 +966,12 @@ skew = -0.10472
 script = ExtResource("6_2dcx3")
 
 [node name="PlayerCharacterBody2D" parent="." instance=ExtResource("2_5o7vr")]
-position = Vector2(0, -5)
+position = Vector2(41, -5)
 scale = Vector2(4, 4)
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacterBody2D"]
 position = Vector2(-0.25, -30.75)
 zoom = Vector2(3, 2)
+
+[node name="LevelChangeArea" parent="." instance=ExtResource("8_h4a6q")]
+position = Vector2(-210, -100)

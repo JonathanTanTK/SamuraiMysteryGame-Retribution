@@ -11,6 +11,7 @@ var can_interact = true
 func register_area(area: InteractionArea):
 	active_areas.push_back(area)
 	print("added")
+	print(active_areas)
 	
 func unregister_area(area: InteractionArea):
 	var index = active_areas.find(area)
@@ -45,7 +46,6 @@ func _sort_by_distance_to_player(area1, area2):
 func _input(event):
 	if event.is_action_pressed("interact") && can_interact:
 		if active_areas.size() > 0:
-			print("in the if statement")
 			can_interact = false
 			label.hide()
 			

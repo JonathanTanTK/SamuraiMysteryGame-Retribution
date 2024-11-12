@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cikc3b6a0mens"]
+
+[ext_resource type="Script" path="res://scripts/level_change_area.gd" id="1_2bcbc"]
+[ext_resource type="PackedScene" uid="uid://o07usxldyyg5" path="res://scenes/interaction_area.tscn" id="2_hsypb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcm3e"]
+
+[node name="LevelChangeArea" type="Node2D"]
+script = ExtResource("1_2bcbc")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_hsypb")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+scale = Vector2(1, 10)
+shape = SubResource("RectangleShape2D_gcm3e")
