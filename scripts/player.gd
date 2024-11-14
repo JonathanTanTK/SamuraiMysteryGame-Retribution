@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var gravity = 30
 @export var jump_force = -500
 @onready var sprite = $Sprite2D
+var can_move = true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -26,9 +27,9 @@ func _physics_process(delta: float) -> void:
 	
 	var horizontal_dir = Input.get_axis("move_left","move_right")
 	velocity.x = speed * horizontal_dir
-	if velocity.x > 0:
-		sprite.flip_h = true  # Facing right
-	elif velocity.x < 0:
-		sprite.flip_h = false   # Facing left
-
-	move_and_slide()
+	if can_move:
+		if velocity.x > 0:
+			sprite.flip_h = true  # Facing right
+		elif velocity.x < 0:
+			sprite.flip_h = false   # Facing left
+		move_and_slide()

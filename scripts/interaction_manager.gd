@@ -48,6 +48,6 @@ func _input(event):
 		if active_areas.size() > 0:
 			can_interact = false
 			label.hide()
-			
+			player.can_move = false
 			await active_areas[0].interact.call()
 			# will be reactivated when signal is received
