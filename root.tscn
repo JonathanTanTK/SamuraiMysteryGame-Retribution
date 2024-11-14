@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c2vu2bdpwgjas"]
+[gd_scene load_steps=12 format=3 uid="uid://c2vu2bdpwgjas"]
 
 [ext_resource type="Texture2D" uid="uid://d1hb1wmio21y1" path="res://tilemaps/preview.png" id="1_dror1"]
 [ext_resource type="PackedScene" uid="uid://bccel1i5pgqhh" path="res://scenes/Player.tscn" id="2_5o7vr"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cj5khkbhgdpt7" path="res://scenes/plant.tscn" id="3_yku4t"]
 [ext_resource type="PackedScene" uid="uid://bsd5akapfh2nv" path="res://scenes/drinker.tscn" id="5_7whmr"]
 [ext_resource type="Script" path="res://scripts/drinker.gd" id="6_2dcx3"]
+[ext_resource type="Script" path="res://scripts/fade_layer.gd" id="8_75m67"]
 [ext_resource type="PackedScene" uid="uid://cikc3b6a0mens" path="res://scenes/levelChangeArea.tscn" id="8_h4a6q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5l26m"]
@@ -972,6 +973,24 @@ scale = Vector2(4, 4)
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacterBody2D"]
 position = Vector2(-0.25, -30.75)
 zoom = Vector2(3, 2)
+
+[node name="FadeLayer" type="CanvasLayer" parent="PlayerCharacterBody2D/Camera2D"]
+script = ExtResource("8_75m67")
+
+[node name="ColorRect" type="ColorRect" parent="PlayerCharacterBody2D/Camera2D/FadeLayer"]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -490.0
+offset_top = -37.0
+offset_right = -490.0
+offset_bottom = -685.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerCharacterBody2D/Camera2D/FadeLayer"]
 
 [node name="LevelChangeArea" parent="." instance=ExtResource("8_h4a6q")]
 position = Vector2(-210, -100)
