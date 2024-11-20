@@ -17,7 +17,7 @@
 "portraits": {
 "New portrait": {
 "export_overrides": {
-"image": "\"res://Main Characters/Ninja Frog/Fall (32x32).png\""
+"image": "\"res://Main Characters/ronin.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

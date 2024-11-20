@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bccel1i5pgqhh"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_7odm3"]
-[ext_resource type="Texture2D" uid="uid://b2lig5b3jxapk" path="res://Main Characters/samurai_orange.png" id="2_24tsk"]
+[ext_resource type="Texture2D" uid="uid://dqolypp6um125" path="res://Main Characters/ronin.png" id="2_fhpst"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgqj3"]
 
@@ -11,7 +11,7 @@ script = ExtResource("1_7odm3")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-2, -16)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_24tsk")
+texture = ExtResource("2_fhpst")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -16)

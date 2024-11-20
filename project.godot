@@ -29,15 +29,13 @@ directories/dch_directory={
 "player_detective": "res://addons/characters_dialog/player_detective.dch"
 }
 directories/dtl_directory={
-"drinker": "res://addons/dialogic/Timelines/drinker.dtl",
-"test_timelines": "res://addons/dialogic/Timelines/test_timelines.dtl"
+"bar_owner": "res://addons/dialogic/Timelines/bar_owner.dtl",
+"drinker": "res://addons/dialogic/Timelines/drinker.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
-variables={
-"conversations": 0
-}
+variables={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
