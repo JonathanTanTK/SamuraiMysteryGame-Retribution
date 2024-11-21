@@ -3802,7 +3802,7 @@ scale = Vector2(0.5, 0.5)
 
 [node name="BarOwner" parent="." instance=ExtResource("3_rrt7n")]
 show_behind_parent = true
-position = Vector2(273, -68)
+position = Vector2(275, -76)
 scale = Vector2(2, 2)
 
 [node name="Drinker" parent="." instance=ExtResource("5_7whmr")]
@@ -3814,21 +3814,21 @@ script = ExtResource("6_2dcx3")
 
 [node name="Priest" parent="." instance=ExtResource("11_3bemn")]
 show_behind_parent = true
-position = Vector2(1240.8, -82.9996)
+position = Vector2(1241, -87)
 script = ExtResource("13_u6pm5")
 
 [node name="Gossip" parent="." instance=ExtResource("17_xy85j")]
-position = Vector2(2276, -68)
+position = Vector2(2269, -67)
 script = ExtResource("15_iyd7g")
 
 [node name="Merchant" parent="." instance=ExtResource("19_6hqug")]
 show_behind_parent = true
-position = Vector2(3845, -73)
+position = Vector2(3844, -78)
 script = ExtResource("20_dja6i")
 
 [node name="PlayerCharacterBody2D" parent="." instance=ExtResource("2_5o7vr")]
-position = Vector2(41, -5)
-scale = Vector2(4, 4)
+rotation = -3.14159
+scale = Vector2(4, -4)
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacterBody2D"]
 position = Vector2(-0.25, -30.75)
