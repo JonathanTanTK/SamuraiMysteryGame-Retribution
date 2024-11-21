@@ -1,65 +1,36 @@
 drunk: Ahh… death, ain't it a funny thing? The old man had it coming, some might say. But you didn’t hear that from me… No sir, you didn’t.
 [wait time="0.1"]
 - You seem pretty shaken. Did you see what happened?
-	drunk: I might have… seen a shadow… a figure lurkin’ near the elder’s hut. But, ah, shadows play tricks, don’t they? Could’ve been anyone… or no one.
+	[signal arg="consume_energy"]
+	drunk: I don’t know. he..he.. Did YOU?
 	[wait time="0.1"]
 	- Were you drunk at the time?
-		drunk: When am I every sober?
+		[signal arg="consume_energy"]
+		drunk: Bah! Don’t judge a man by his drink. I may be a fool, but I’ve seen things you couldn’t imagine! Things even the sober ones ignore!
 		[wait time="1.0"]
 		[Drunk passes out]
-	- Could you describe their size or clothing?
-		drunk: Hard to say… it was dark, and the sake was good that night. But… maybe they had a cloak? Hah, or maybe that was just the wind playing tricks…
+	- Focus. Did you see anything suspicious last night?
+		[signal arg="consume_energy"]
+		drunk: Hard to say… it was dark, and the sake was good that night. God, why did I have to be there…
 		[wait time="1.0"]
 		[Drunk passes out]
-	- Forget it. I think you’re making it up.
-		drunk: I know who did it. I saw them with my own eyes. It was ....
-		[wait time="1.0"]
-		[Drunk passes out]
+	- [This is pointless]
 - Why do you think the elder had it coming?
+	[signal arg="consume_energy"]
 	drunk: He was no saint, that’s for sure. He had secrets, made enemies. Even I knew that. But I wasn’t about to lose my head pokin’ ‘round where I don’t belong.
 	[wait time="0.1"]
 	- What kind of enemies are we talking about?
-		drunk: The ones that are the closest to you. It was...
+		[signal arg="consume_energy"]
 		[wait time="1.0"]
 		[Drunk passes out]
 	- Are you saying you’d like to see him gone?
-		drunk: Oh not me!! He bought me drinks... ahh drinks ...
-		[wait time="1.0"]
-		[Drunk passes out]
-	- Enemies from outside the village, or closer to home?
-		drunk: Enemies? Hah! The kind that hide in plain sight. Like shadows, they blend in… the ones who smile with secrets behind their eyes.
+		[signal arg="consume_energy"]
 		[wait time="1.0"]
 		[Drunk passes out]
 - How much sake have you had today? You seem… unreliable.
+	[signal arg="consume_energy"]
 	drunk: Bah! Don’t judge a man by his drink. I may be a fool, but I’ve seen things you couldn’t imagine! Things even the sober ones ignore!
-	[wait time="0.1"]
-	- Alright, alright… what things have you seen?
-		drunk: People sneakin’ ‘round… shadows watchin’ shadows. They think they’re clever, but a drunkard sees more than they think. Don’t need to be sober to see betrayal…
-		[wait time="1.0"]
-		[Drunk passes out]
-	- Relax, I’m just trying to get the truth.
-		drunk: Truth can't be seen by your likes... all proper. You got to get dirty.
-		[wait time="1.0"]
-		[Drunk passes out]
-	- So you are a fool then?
-		drunk: That old man was a fool!
-		[wait time="1.0"]
-		[Drunk passes out]
-	- I’ll come back when you’re sober.
-		[signal arg="exit_dialog"]
-- What can you tell me about the elder’s wife? She’s a bit of a mystery.
-	drunk: Ahh, the lady herself… beautiful but cold, like a winter night. Some say she wept for him; others say she’s the reason he’s gone.
-	[wait time="0.1"]
-	- Did she have any reason to want him dead?
-		drunk: I wouldn’t know, but when winter stays too long… even the strongest trees start to wither. Maybe she was just waitin’ for spring...
-		[wait time="1.0"]
-		[Drunk passes out]
-	- Is there someone she’s… close to?
-		drunk: Who knows? Someone who could handle those cold eyes....
-		[wait time="1.0"]
-		[Drunk passes out]
-	- Did you see her around the night of the murder?
-		drunk: Her, him.... could have been anyone..... but I am sure I saw ....
-		[wait time="1.0"]
-		[Drunk passes out]
+	[wait time="1.0"]
+	[Drunk passes out]
+- [This is pointless]
 [signal arg="exit_dialog"]

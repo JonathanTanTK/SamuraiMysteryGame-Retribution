@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bstgrqx417a41"]
+
+[ext_resource type="Texture2D" uid="uid://cq46qkx14xh1m" path="res://tilemaps/marketbuilding.png" id="1_p3fu7"]
+
+[node name="Marketbuilding1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_p3fu7")

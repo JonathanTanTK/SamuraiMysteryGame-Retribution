@@ -26,11 +26,17 @@ DayManager="*res://scripts/day_manager.gd"
 directories/dch_directory={
 "bar_owner": "res://addons/characters_dialog/bar_owner.dch",
 "drunk": "res://addons/characters_dialog/drunk.dch",
-"player_detective": "res://addons/characters_dialog/player_detective.dch"
+"gossip": "res://Main Characters/gossip.dch",
+"merchant": "res://addons/characters_dialog/merchant.dch",
+"player_detective": "res://addons/characters_dialog/player_detective.dch",
+"priest": "res://addons/characters_dialog/priest.dch"
 }
 directories/dtl_directory={
 "bar_owner": "res://addons/dialogic/Timelines/bar_owner.dtl",
-"drinker": "res://addons/dialogic/Timelines/drinker.dtl"
+"drinker": "res://addons/dialogic/Timelines/drinker.dtl",
+"gossip": "res://addons/dialogic/Timelines/gossip.dtl",
+"merchant": "res://addons/dialogic/Timelines/merchant.dtl",
+"priest": "res://addons/dialogic/Timelines/priest.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]

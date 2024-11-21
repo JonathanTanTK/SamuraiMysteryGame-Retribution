@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4re3a673ip5r"]
+
+[ext_resource type="Texture2D" uid="uid://da416q5tya4ij" path="res://Main Characters/merchant.png" id="1_oodb0"]
+[ext_resource type="PackedScene" uid="uid://o07usxldyyg5" path="res://scenes/interaction_area.tscn" id="2_l5yps"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_14y3j"]
+
+[node name="Merchant" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_oodb0")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_l5yps")]
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_14y3j")

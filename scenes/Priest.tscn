@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://beq51rn3kdnom"]
+
+[ext_resource type="Texture2D" uid="uid://dsbgibyc1syyl" path="res://Main Characters/priest.png" id="1_uhyy2"]
+[ext_resource type="PackedScene" uid="uid://o07usxldyyg5" path="res://scenes/interaction_area.tscn" id="2_f14ej"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wuptw"]
+
+[node name="Priest" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_uhyy2")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_f14ej")]
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_wuptw")
