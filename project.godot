@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 InteractionManager="*res://scenes/interaction_manager.tscn"
 DayManager="*res://scripts/day_manager.gd"
+FadeTransition="*res://scenes/fade_transition.tscn"
 
 [dialogic]
 

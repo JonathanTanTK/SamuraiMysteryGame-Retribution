@@ -19,3 +19,7 @@ position = Vector2(-6, -16)
 rotation = -3.14159
 scale = Vector2(1.24198, -1.57818)
 shape = SubResource("RectangleShape2D_cgqj3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-0.25, -30.75)
+zoom = Vector2(3, 2)

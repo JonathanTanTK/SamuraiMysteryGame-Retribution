@@ -1,26 +1,29 @@
 extends CanvasLayer
-@onready var color_rect = $ColorRect
-@onready var animation_player = $AnimationPlayer
+var color_rect
+var animation_player
 
+signal on_transition_finished
 
-func fade_and_reload_scene(scene_path: String):
+func fade_and_reload_scene():
+	color_rect.visible = true
 	# Play the fade-in animation
 	animation_player.play("fade_to_black")
-	
-	# Wait for the animation to finish, then reload the scene
-	await animation_player
-
-	# Reload or change the scene
-	get_tree().change_scene(scene_path)
-
-	# Play the fade-out animation after the scene has loaded
-	animation_player.play("fade_from_black")
-
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	#print(get_children())
+	var children = get_children()
+	color_rect = children[0]
+	animation_player = children[1]
+	color_rect.visible = false
+	animation_player.animation_finished.connect(_on_animation_finished)
 
+func _on_animation_finished(anim_name):
+	if anim_name == "fade_to_black":
+		on_transition_finished.emit()
+		animation_player.play("fade_to_normal")
+	elif anim_name == "fade_to_normal":
+		color_rect.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
