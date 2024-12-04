@@ -1,0 +1,22 @@
+gossip: This is your last day, isn’t it? Better make it count. Oh, did you hear? The villagers just found another body in the same well they found the chief’s body in. It seems to be that drunkard who’s always at the bar. Poor him.
+[wait time="0.1"]
+- Did hear about anything else on the night of the murder?
+	[signal arg="consume_energy"]
+	gossip: Just the elder and his wife fighting again. I overheard their argument and she threatened to leave him if he didn’t change his ways.
+	[wait time="0.1"]
+	- Do you think she meant it?
+		[signal arg="consume_energy"]
+		gossip: Maybe. She seemed fed up. She also said that she would’ve been a lot happier if she were married to someone who isn’t an alcoholic. But who’s to say what’s in a woman’s heart?
+		[signal arg="exit_dialog"]
+	- Do you think this has something to do with her secret affair?
+		[signal arg="consume_energy"]
+		gossip: She might be implicitly trying to justify having an affair that her husband doesn’t know about. Ooo this is getting spicy.
+		[signal arg="exit_dialog"]
+	- Thank you.
+		[signal arg="exit_dialog"]
+- Have you noticed anything odd about the samurai?
+	[signal arg="consume_energy"]
+	gossip: He’s been distant, but that’s not new. He’s always been hard to read.
+	[signal arg="exit_dialog"]
+- Thanks.
+[signal arg="exit_dialog"]

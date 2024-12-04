@@ -1,0 +1,22 @@
+bar_owner: Still chasing shadows, are you? Any luck so far son?
+[wait time="0.1"]
+- Did you notice anything odd at the bar the night of the murder?
+	[signal arg="consume_energy"]
+	bar_owner: Now that you mention it, none of the suspects were here. Odd, isn’t it? Especially since the samurai used to be a regular until he quit drinking earlier in the month.
+	[wait time="0.1"]
+	- Why do you think the samurai quit drinking?
+		[signal arg="consume_energy"]
+		bar_owner: He said it was for health reasons, but who knows? People have all kinds of reasons to change their habits.
+		[signal arg="exit_dialog"]
+	- Why were the others not at the bar that night?
+		[signal arg="consume_energy"]
+		bar_owner: As for them, I’m not sure. The merchant never visits and so does the chief’s wife. Doesn’t she despise drinking? Hmph.
+		[signal arg="exit_dialog"]
+	- Thank you.
+		[signal arg="exit_dialog"]
+- Do you think the elder had enemies?
+	[signal arg="consume_energy"]
+	bar_owner: In a village like this? Everyone’s got secrets. But I wouldn’t be quick to point fingers without proof.
+	[signal arg="exit_dialog"]
+- Thanks for your help.
+[signal arg="exit_dialog"]

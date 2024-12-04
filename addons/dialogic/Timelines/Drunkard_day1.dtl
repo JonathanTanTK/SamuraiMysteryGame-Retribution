@@ -7,30 +7,29 @@ drunk: Ahh… death, ain't it a funny thing? The old man had it coming, some mig
 	- Were you drunk at the time?
 		[signal arg="consume_energy"]
 		drunk: Bah! Don’t judge a man by his drink. I may be a fool, but I’ve seen things you couldn’t imagine! Things even the sober ones ignore!
-		[wait time="1.0"]
-		[Drunk passes out]
+		[signal arg="exit_dialog"]
 	- Focus. Did you see anything suspicious last night?
 		[signal arg="consume_energy"]
 		drunk: Hard to say… it was dark, and the sake was good that night. God, why did I have to be there…
-		[wait time="1.0"]
-		[Drunk passes out]
-	- [This is pointless]
+	- This is pointless.
+		[signal arg="exit_dialog"]
 - Why do you think the elder had it coming?
 	[signal arg="consume_energy"]
-	drunk: He was no saint, that’s for sure. He had secrets, made enemies. Even I knew that. But I wasn’t about to lose my head pokin’ ‘round where I don’t belong.
+	drunk: He was no saint, that’s for sure. He had secrets, made enemies. Even I knew that. But I wasn’t about to lose my head pokin’ ‘round where I don’t belong. *Hiccup*
 	[wait time="0.1"]
 	- What kind of enemies are we talking about?
 		[signal arg="consume_energy"]
-		[wait time="1.0"]
-		[Drunk passes out]
+		*Drunkard passes out*
+		[signal arg="exit_dialog"]
 	- Are you saying you’d like to see him gone?
 		[signal arg="consume_energy"]
-		[wait time="1.0"]
-		[Drunk passes out]
+		*Drunkard passes out*
+		[signal arg="exit_dialog"]
+	- Hmm.
+		[signal arg="exit_dialog"]
 - How much sake have you had today? You seem… unreliable.
 	[signal arg="consume_energy"]
 	drunk: Bah! Don’t judge a man by his drink. I may be a fool, but I’ve seen things you couldn’t imagine! Things even the sober ones ignore!
-	[wait time="1.0"]
-	[Drunk passes out]
-- [This is pointless]
+	[signal arg="exit_dialog"]
+- This is pointless.
 [signal arg="exit_dialog"]

@@ -24,6 +24,9 @@ DayManager="*res://scripts/day_manager.gd"
 [dialogic]
 
 directories/dch_directory={
+"Judge": "res://addons/characters_dialog/Judge.dch",
+"Samurai": "res://addons/characters_dialog/Samurai.dch",
+"Wife": "res://addons/characters_dialog/Wife.dch",
 "bar_owner": "res://addons/characters_dialog/bar_owner.dch",
 "drunk": "res://addons/characters_dialog/drunk.dch",
 "gossip": "res://Main Characters/gossip.dch",
@@ -32,16 +35,28 @@ directories/dch_directory={
 "priest": "res://addons/characters_dialog/priest.dch"
 }
 directories/dtl_directory={
-"bar_owner": "res://addons/dialogic/Timelines/bar_owner.dtl",
-"drinker": "res://addons/dialogic/Timelines/drinker.dtl",
+"Bar_Owner_day3": "res://addons/dialogic/Timelines/Bar_Owner_day3.dtl",
+"Drunkard_day1": "res://addons/dialogic/Timelines/Drunkard_day1.dtl",
+"Drunkard_day2": "res://addons/dialogic/Timelines/Drunkard_day2.dtl",
+"Gossiper_day2": "res://addons/dialogic/Timelines/Gossiper_day2.dtl",
+"Gossiper_day3": "res://addons/dialogic/Timelines/Gossiper_day3.dtl",
+"Judge_Courtroom": "res://addons/dialogic/Timelines/Judge_Courtroom.dtl",
+"Priest_day3": "res://addons/dialogic/Timelines/Priest_day3.dtl",
+"Samurai_day2": "res://addons/dialogic/Timelines/Samurai_day2.dtl",
+"Wife_day3": "res://addons/dialogic/Timelines/Wife_day3.dtl",
+"bar_owner": "res://addons/dialogic/Timelines/bar_owner_day1.dtl",
+"bar_owner_day2": "res://addons/dialogic/Timelines/bar_owner_day2.dtl",
 "gossip": "res://addons/dialogic/Timelines/gossip.dtl",
 "merchant": "res://addons/dialogic/Timelines/merchant.dtl",
-"priest": "res://addons/dialogic/Timelines/priest.dtl"
+"priest_day1": "res://addons/dialogic/Timelines/priest_day1.dtl",
+"priest_day2": "res://addons/dialogic/Timelines/priest_day2.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
-variables={}
+variables={
+"Suspect": "Meow"
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

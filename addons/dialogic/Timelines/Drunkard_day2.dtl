@@ -1,0 +1,28 @@
+drunk: Were you the guy from yesterday? Fine, I’ll tell you what I saw.
+[wait time="0.1"]
+- What did you see last night?
+	[signal arg="consume_energy"]
+	drunk: I heard two men arguing in the alley behind the town hall. Couldn’t see much in the dark, but there was shouting, then silence, and then… a sword. A katana.
+	[wait time="0.1"]
+	- Did you recognize the voices?
+		[signal arg="consume_energy"]
+		drunk: Not clearly. But one of them sounded… familiar. Could’ve been the samurai, or maybe not. I don’t know! Not everyone can own a katana here come to think of it.
+		[wait time="0.1"]
+		- Anything else you would like to tell me?
+			[signal arg="consume_energy"]
+			drunk: No! That’s all I know! I don’t even feel safe talking about this to you! I gotta go!
+			[signal arg="exit_dialog"]
+		- Thanks, you’ve been helpful.
+			[signal arg="exit_dialog"]
+	- Why didn’t you tell anyone before?
+		[signal arg="consume_energy"]
+		drunk: You think anyone would believe me? I’m just the village drunk. Regardless, I hope whoever was there that night, didn’t notice me.
+		[signal arg="exit_dialog"]
+	- Thanks.
+		[signal arg="exit_dialog"]
+- Are you sure you’re sober this time?
+	[signal arg="consume_energy"]
+	drunk: Y-yea I am! If you don’t want my help then get lost!
+	[signal arg="exit_dialog"]
+- Nevermind.
+[signal arg="exit_dialog"]

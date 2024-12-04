@@ -8,16 +8,16 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "New portrait",
+"default_portrait": "samurai",
 "description": "",
-"display_name": "Drunkard",
+"display_name": "Samurai",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"New portrait": {
+"samurai": {
 "export_overrides": {
-"image": "\"res://Main Characters/drinker.PNG\""
+"image": "\"res://Main Characters/samurai.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

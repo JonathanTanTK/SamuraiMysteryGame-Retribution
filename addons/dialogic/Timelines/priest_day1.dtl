@@ -1,17 +1,19 @@
 priest: Peace be with you, traveler. What brings you to our quiet village?
-player_detective: I’m investigating the chief’s murder.
 [wait time="0.1"]
-- Do you have any insights?
+- I’m investigating the chief’s murder. Do you have any insights?
 	[signal arg="consume_energy"]
-	priest: I saw the elder leave the bar earlier than the others that night, walking hurriedly towards the town hall. He seemed… troubled
+	priest: I saw the elder leave the bar earlier than the others that night, walking hurriedly towards the town hall. He seemed… troubled.
 	[wait time="0.1"]
 	- Do you know what had been troubling him?
 		[signal arg="consume_energy"]
 		priest: I rarely ever converse with him at all actually. I apologize.
+		[signal arg="exit_dialog"]
 	- Did you talk to him at all at that moment?
 		[signal arg="consume_energy"]
 		priest: No, I only saw a glimpse of him.
+		[signal arg="exit_dialog"]
 	- Thank you.
+		[signal arg="exit_dialog"]
 - Was anyone with him when he left the bar?
 	[signal arg="consume_energy"]
 	priest: Not that I saw. Oddly enough the Samurai wasn’t with him because normally he is always seen by his side. Come to think of it, the samurai has been acting… different lately…
@@ -19,16 +21,16 @@ player_detective: I’m investigating the chief’s murder.
 	- What do you mean different?
 		[signal arg="consume_energy"]
 		priest: He came to me recently, claiming he’d given up drinking and wants to repent. A noble endeavor, if true. Cause he had always been known as a heavy drinker.
+		[signal arg="exit_dialog"]
 	- Is it that important to have a samurai always at his side?
 		[signal arg="consume_energy"]
-		priest: [ smiles ]
-		[wait time="0.2"]
-		priest: I think he does see himself as someone important.
+		priest: I think he does see himself as someone important
+		[signal arg="exit_dialog"]
 	- Thank you.
+		[signal arg="exit_dialog"]
 - Is the chief a religious man?
 	[signal arg="consume_energy"]
 	priest: Are you religious yourself, young man? It is wise to reflect on ourselves first before judging others. If it helps, I don’t believe this has anything to do with religion.
-	[wait time="0.5"]
-	[The priest starts looking at the river behind him]
-- [This is pointless]
-[signal arg="exit_dialog"]
+	[signal arg="exit_dialog"]
+- This is pointless.
+	[signal arg="exit_dialog"]

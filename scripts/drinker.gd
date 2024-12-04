@@ -7,7 +7,7 @@ func _ready() -> void:
 	Dialogic.signal_event.connect(dialogic_signal)
 
 func _on_interact():
-	Dialogic.start("drinker")
+	Dialogic.start("Drunkard_day1")
 
 func dialogic_signal(arg: String):
 	if arg == "exit_dialog":
