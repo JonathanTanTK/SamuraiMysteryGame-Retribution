@@ -3830,10 +3830,6 @@ script = ExtResource("20_dja6i")
 rotation = -3.14159
 scale = Vector2(4, -4)
 
-[node name="Camera2D2" type="Camera2D" parent="PlayerCharacterBody2D"]
-position = Vector2(-0.25, -30.75)
-zoom = Vector2(3, 2)
-
 [node name="LevelChangeArea" parent="." instance=ExtResource("8_h4a6q")]
 position = Vector2(-210, -100)
 level_change = "res://scenes/level2.tscn"

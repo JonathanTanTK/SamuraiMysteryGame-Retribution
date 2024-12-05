@@ -1,6 +1,6 @@
 extends Node
 
-var conversations = 3
+var conversations = 5
 var day = 0
 signal call_fade
 
@@ -12,7 +12,7 @@ func dialogic_signal(arg: String):
 	if arg == "consume_energy":
 		conversations -= 1
 	if conversations == 0:
-		conversations = 3
+		conversations = 5
 		change_day()
 		print("Day ", day, " has started. Actions have been reset.")
 
