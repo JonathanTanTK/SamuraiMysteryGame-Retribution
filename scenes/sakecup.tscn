@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bls0b6qw3x57y"]
+
+[ext_resource type="Texture2D" uid="uid://dfivttp0beehc" path="res://tilemaps/sakecup.png" id="1_j3iyc"]
+
+[node name="Sakecup" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_j3iyc")

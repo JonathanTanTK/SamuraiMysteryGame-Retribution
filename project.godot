@@ -45,7 +45,7 @@ directories/dtl_directory={
 "Priest_day3": "res://addons/dialogic/Timelines/Priest_day3.dtl",
 "Samurai_day2": "res://addons/dialogic/Timelines/Samurai_day2.dtl",
 "Wife_day3": "res://addons/dialogic/Timelines/Wife_day3.dtl",
-"bar_owner": "res://addons/dialogic/Timelines/bar_owner_day1.dtl",
+"bar_owner_day1": "res://addons/dialogic/Timelines/bar_owner_day1.dtl",
 "bar_owner_day2": "res://addons/dialogic/Timelines/bar_owner_day2.dtl",
 "gossip": "res://addons/dialogic/Timelines/gossip.dtl",
 "merchant": "res://addons/dialogic/Timelines/merchant.dtl",
@@ -77,6 +77,10 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+
+[display]
+
+window/size/mode=2
 
 [editor_plugins]
 

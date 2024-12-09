@@ -12,8 +12,7 @@ func _on_interact():
 	FadeTransition.fade_and_reload_scene()
 	await FadeTransition.on_transition_finished
 	print("changing")
-	get_tree().change_scene_to_file(level_change)
-
+	get_tree().change_scene_to_file(level_change);
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

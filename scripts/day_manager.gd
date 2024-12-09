@@ -12,11 +12,11 @@ func dialogic_signal(arg: String):
 	if arg == "consume_energy":
 		conversations -= 1
 	if conversations == 0:
-		conversations = 5
 		change_day()
 		print("Day ", day, " has started. Actions have been reset.")
 
 func change_day():
+	conversations = 5;
 	day+= 1
 	print(day)
 	if day == 1:
@@ -25,10 +25,11 @@ func change_day():
 		print("changing")
 		get_tree().change_scene_to_file("res://scenes/level2.tscn")
 	elif day == 2:
-		get_tree().change_scene_to_file("day3.tscn")
+		get_tree().change_scene_to_file("res://scenes/day3.tscn")
 	elif day == 3:
 		#judgement scene
-		get_tree().change_scene_to_file("court.tscn")
+		get_tree().change_scene_to_file("res://scenes/court.tscn")
+		Dialogic.start("Judge_Courtoom")
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

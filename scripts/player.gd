@@ -9,7 +9,9 @@ var can_move = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	sprite.flip_h = true;
+	Dialogic.signal_event.connect(dialogic_signal)
+	#pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,3 +35,13 @@ func _physics_process(delta: float) -> void:
 		elif velocity.x < 0:
 			sprite.flip_h = false   # Facing left
 		move_and_slide()
+
+func dialogic_signal(arg: String):
+		if arg == "last_scene":
+			FadeTransition.fade_and_reload_scene()
+			FadeTransition.fade_and_reload_scene()
+			FadeTransition.fade_and_reload_scene()
+			FadeTransition.fade_and_reload_scene()
+			FadeTransition.fade_and_reload_scene()
+			FadeTransition.fade_and_reload_scene()
+			get_tree().change_scene_to_file("res://scenes/death.tscn")

@@ -1,5 +1,6 @@
+[wait time="1.5" hide_text="false"]
 Judge: Yasuo Kagami, Ronin of no lord but truth itself. You stand here today to deliver justice for our slain chief. Have you uncovered the truth of his death?
-player_detective: I have pieced together the threads of lies, deceit, and pain that led to the elder's demise. 
+player_detective: I have pieced together the threads of lies, deceit, and pain that led to the elder's demise.
 player_detective: I believe I know who committed this heinous crime.
 Judge: Speak, then. Who among these three stands guilty of this terrible act?
 Judge: But remember, the weight of your words will shape the fate of this village.
@@ -12,19 +13,20 @@ Judge: But remember, the weight of your words will shape the fate of this villag
 - The Chief's Wife
 	set {Suspect} = "3"
 if {Suspect} == "1":
-	player_detective: The culprit is none other than... 
+	player_detective: The culprit is none other than...
 	player_detective: The Wealthy Merchant!
 elif {Suspect} == "2":
-	player_detective: The culprit is none other than... 
+	player_detective: The culprit is none other than...
 	player_detective: The Samurai!
 else:
 	player_detective: The culprit is none other than...
 	player_detective: The Chief's Wife!
-Judge:  (leaning forward solemnly) "You are certain? This is a grave accusation, Yasuo. 
+Judge: (leaning forward solemnly) "You are certain? This is a grave accusation, Yasuo.
 Judge: Let it be known that you hold the lives of these people in your hands. Truth must prevail over haste.
 player_detective: I have weighed the evidence. This is the truth as I see it. Justice must be served, no matter how grim the cost.
-[wait time="2.0"]
-Suddenly, the candles flicker violently as if caught in an invisible wind. The room plunges into complete darkness.
+[wait time="1.0"]
+[signal arg="last_scene"]
+[ Suddenly, the candles flicker violently as if caught in an invisible wind. The room plunges into complete darkness. ]
 [wait time="10.0"]
 Judge: (rising, voice trembling) "What… What has happened? Where are the three suspects?!"
 [wait time="5.0"]
