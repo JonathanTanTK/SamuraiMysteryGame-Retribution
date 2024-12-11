@@ -10,7 +10,7 @@ var can_interact = true
 
 func register_area(area: InteractionArea):
 	active_areas.push_back(area)
-	print("added")
+	print("active areas:")
 	print(active_areas)
 	
 func unregister_area(area: InteractionArea):
@@ -48,6 +48,10 @@ func _input(event):
 		if active_areas.size() > 0:
 			can_interact = false
 			label.hide()
-			player.can_move = false
+			get_player().can_move = false
 			await active_areas[0].interact.call()
 			# will be reactivated when signal is received
+			
+func get_player() -> Node:
+	# Dynamically fetch the player node
+	return get_tree().get_first_node_in_group("player")

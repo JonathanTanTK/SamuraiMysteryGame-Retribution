@@ -4,12 +4,12 @@ extends CharacterBody2D
 @export var gravity = 30
 @export var jump_force = -500
 @onready var sprite = $Sprite2D
-var can_move = true
+@onready var can_move = true
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	sprite.flip_h = true;
+	#sprite.flip_h = true;
 	Dialogic.signal_event.connect(dialogic_signal)
 	#pass # Replace with function body.
 
