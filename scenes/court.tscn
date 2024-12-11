@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwbkg0hcc7eh7"]
+[gd_scene load_steps=13 format=3 uid="uid://cwbkg0hcc7eh7"]
 
 [ext_resource type="Texture2D" uid="uid://d1hb1wmio21y1" path="res://tilemaps/preview.png" id="1_5ch3y"]
 [ext_resource type="Texture2D" uid="uid://cayxb5hxiw1b6" path="res://tilemaps/Court.PNG" id="1_hvah0"]
 [ext_resource type="PackedScene" uid="uid://bccel1i5pgqhh" path="res://scenes/Player.tscn" id="2_8jrqp"]
 [ext_resource type="Texture2D" uid="uid://c07dmjlou1crl" path="res://tilemaps/Asian_D_Foliage.png" id="2_ovvjn"]
 [ext_resource type="Texture2D" uid="uid://sevyenjb4xam" path="res://tilemaps/Sample.png" id="3_oenkb"]
+[ext_resource type="PackedScene" uid="uid://uymah7t4qisu" path="res://scenes/wife.tscn" id="5_2e33b"]
 [ext_resource type="PackedScene" uid="uid://crgkeenrwx4sh" path="res://scenes/samurai.tscn" id="5_uhptw"]
 [ext_resource type="PackedScene" uid="uid://c4re3a673ip5r" path="res://scenes/merchant.tscn" id="6_ltp5s"]
 
@@ -3726,12 +3727,16 @@ layer_0/tile_data = PackedInt32Array(131060, 0, 19, 131061, 65536, 19, 131062, 1
 position = Vector2(169, -261)
 texture = ExtResource("1_hvah0")
 
+[node name="Wife" parent="." instance=ExtResource("5_2e33b")]
+position = Vector2(272, -99)
+scale = Vector2(1, 1.25)
+
 [node name="Samurai" parent="." instance=ExtResource("5_uhptw")]
 position = Vector2(319, -91)
 scale = Vector2(1, 1.5)
 
 [node name="Merchant" parent="." instance=ExtResource("6_ltp5s")]
-position = Vector2(366, -74)
+position = Vector2(358, -74)
 scale = Vector2(1, 1.5)
 
 [node name="PlayerCharacterBody2D" parent="." instance=ExtResource("2_8jrqp")]
