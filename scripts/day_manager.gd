@@ -1,6 +1,6 @@
 extends Node
 
-var conversations = 5
+var conversations = 10
 var day = 0
 signal call_fade
 var current_scene = null
@@ -27,7 +27,7 @@ func dialogic_signal(arg: String):
 		print("Day ", day, " has started. Actions have been reset.")
 
 func change_day():
-	conversations = 5
+	conversations = 10
 	day += 1
 	print("Changing to day " + str(day))
 	Dialogic.end_timeline()
