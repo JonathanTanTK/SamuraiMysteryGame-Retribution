@@ -4,15 +4,20 @@ var conversations = 5
 var day = 0
 signal call_fade
 var current_scene = null
-#@onready var level2 = preload("res://scenes/level2.tscn").instantiate()
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Dialogic.signal_event.connect(dialogic_signal)
+	update_current_scene()
+	print(current_scene)
+
+func update_current_scene():
 	var root = get_tree().root
 	current_scene = root.get_child(root.get_child_count() - 1)
-	print(current_scene)
+
+func get_player() -> Node:
+	# Dynamically fetch the player node in the current scene
+	return get_tree().get_first_node_in_group("player")
 
 func dialogic_signal(arg: String):
 	if arg == "consume_energy":
@@ -22,36 +27,40 @@ func dialogic_signal(arg: String):
 		print("Day ", day, " has started. Actions have been reset.")
 
 func change_day():
-	conversations = 5;
-	day+= 1
-	print("changing to day " + str(day))
+	conversations = 5
+	day += 1
+	print("Changing to day " + str(day))
+	Dialogic.end_timeline()
+	InteractionManager.can_interact = true
+
 	if day == 1:
 		FadeTransition.fade_and_reload_scene()
 		await FadeTransition.on_transition_finished
-		#get_tree().change_scene_to_file("res://scenes/level2.tscn")
 		call_deferred("deferred_switch_scene", "res://scenes/level2.tscn")
 	elif day == 2:
-		#get_tree().change_scene_to_file("res://scenes/day3.tscn")
+		FadeTransition.fade_and_reload_scene()
+		await FadeTransition.on_transition_finished
 		call_deferred("deferred_switch_scene", "res://scenes/day3.tscn")
 	elif day == 3:
-		#judgement scene
-		#get_tree().change_scene_to_file("res://scenes/court.tscn")
+		FadeTransition.fade_and_reload_scene()
+		await FadeTransition.on_transition_finished
 		call_deferred("deferred_switch_scene", "res://scenes/court.tscn")
-		Dialogic.start("Judge_Courtoom")
+		print("I am here")
 		
+		# Dynamically fetch the player and disable movement
+		var player = get_player()
+		if player:
+			player.can_move = false
+
+		Dialogic.start("Judge_Courtroom")
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	
+
 func deferred_switch_scene(scene):
-	print("changing scene")
-	#current_scene.queue_free()
-	#var s = load(scene)
-	#current_scene = s.instantiate()
-	#get_tree().root.add_child(current_scene)
-	#get_tree().current_scene = current_scene
+	print("Changing scene...")
 	get_tree().paused = false
 	get_tree().change_scene_to_file(scene)
-	#get_tree().reload_current_scene()
-	#set_process(true)
-	print("changed scene")
+	update_current_scene()  # Update the current scene reference
+	print("Scene changed")

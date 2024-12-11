@@ -8,6 +8,11 @@ func fade_and_reload_scene():
 	color_rect.visible = true
 	# Play the fade-in animation
 	animation_player.play("fade_to_black")
+	
+func fade_and_reload_deathscene():
+	color_rect.visible = true
+	# Play the fade-in animation
+	animation_player.play("fade_to_blackdeath")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,8 +27,12 @@ func _on_animation_finished(anim_name):
 	if anim_name == "fade_to_black":
 		on_transition_finished.emit()
 		animation_player.play("fade_to_normal")
+	elif anim_name == "fade_to_blackdeath":
+		on_transition_finished.emit()
+		animation_player.play("fade_to_normal")
 	elif anim_name == "fade_to_normal":
 		color_rect.visible = false
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

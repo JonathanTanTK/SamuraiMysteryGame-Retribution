@@ -10,7 +10,12 @@ func _ready() -> void:
 	Dialogic.signal_event.connect(dialogic_signal)
 
 func _on_interact():
-	Dialogic.start("bar_owner_day1")
+	if (DayManager.day == 0):
+		Dialogic.start("bar_owner_day1")
+	elif (DayManager.day == 1):
+		Dialogic.start("bar_owner_day2")
+	elif (DayManager.day == 2):
+		Dialogic.start("Bar_Owner_day3")
 
 func dialogic_signal(arg: String):
 	if arg == "exit_dialog":

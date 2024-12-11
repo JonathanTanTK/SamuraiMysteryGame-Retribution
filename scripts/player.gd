@@ -9,7 +9,7 @@ extends CharacterBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#sprite.flip_h = true;
+	sprite.flip_h = true;
 	Dialogic.signal_event.connect(dialogic_signal)
 	#pass # Replace with function body.
 
@@ -38,10 +38,5 @@ func _physics_process(delta: float) -> void:
 
 func dialogic_signal(arg: String):
 		if arg == "last_scene":
-			FadeTransition.fade_and_reload_scene()
-			FadeTransition.fade_and_reload_scene()
-			FadeTransition.fade_and_reload_scene()
-			FadeTransition.fade_and_reload_scene()
-			FadeTransition.fade_and_reload_scene()
-			FadeTransition.fade_and_reload_scene()
+			FadeTransition.fade_and_reload_deathscene()
 			get_tree().change_scene_to_file("res://scenes/death.tscn")

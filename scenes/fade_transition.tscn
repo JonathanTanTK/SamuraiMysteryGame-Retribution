@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqoh0fr8xpt77"]
+[gd_scene load_steps=7 format=3 uid="uid://dqoh0fr8xpt77"]
 
 [ext_resource type="Script" path="res://scripts/fade_layer.gd" id="1_n4ir2"]
 
@@ -11,10 +11,10 @@ tracks/0/path = NodePath("ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_tdelg"]
@@ -49,10 +49,27 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_e85yf"]
+resource_name = "fade_to_blackdeath"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4333, 1.43333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4xorb"]
 _data = {
 "RESET": SubResource("Animation_nkpep"),
 "fade_to_black": SubResource("Animation_tdelg"),
+"fade_to_blackdeath": SubResource("Animation_e85yf"),
 "fade_to_normal": SubResource("Animation_2207p")
 }
 
