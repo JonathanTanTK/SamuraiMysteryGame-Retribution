@@ -17,8 +17,10 @@ func _on_interact():
 	DayManager.change_day()
 	InteractionManager.can_interact = true
 	InteractionManager.label.show()
-	var player = InteractionManager.get_player()
-	player.can_move = true
+	#var player = InteractionManager.get_player()
+	#player.can_move = true
+	#if DayManager.day == 3:
+		#player.can_move = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

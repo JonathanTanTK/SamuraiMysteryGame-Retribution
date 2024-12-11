@@ -9,6 +9,8 @@ extends CharacterBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if DayManager.day == 3:
+		can_move = false
 	sprite.flip_h = true;
 	Dialogic.signal_event.connect(dialogic_signal)
 	#pass # Replace with function body.

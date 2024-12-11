@@ -5727,7 +5727,11 @@ scale = Vector2(4, -6)
 
 [node name="LevelChangeArea2" parent="." instance=ExtResource("19_8lroj")]
 position = Vector2(6389, -105)
-level_change = "res://scenes/level2.tscn"
+level_change = "res://scenes/court.tscn"
+
+[node name="LevelChangeArea3" parent="." instance=ExtResource("19_8lroj")]
+position = Vector2(-432, -125)
+level_change = "res://scenes/court.tscn"
 
 [node name="FadeTransition" parent="." instance=ExtResource("20_ltoq5")]
 

@@ -49,9 +49,7 @@ func change_day():
 		
 		# Dynamically fetch the player and disable movement
 		var player = get_player()
-		if player:
-			player.can_move = false
-
+		player.can_move = false
 		Dialogic.start("Judge_Courtroom")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
