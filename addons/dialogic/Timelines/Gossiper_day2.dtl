@@ -1,28 +1,23 @@
 gossip: Oh, back for more juicy tidbits?
 [wait time="0.1"]
-- Do you have any details about the chief’s wife?
-	[signal arg="consume_energy"]
+- Do you have any details about the chief’s wife? [-1 conversations]
 	gossip: Well leading up to the chief’s death, me and the other villager noticed that she had been happier than usual. Which was pretty suspicious if you ask me.
-	[wait time="0.1"]
-	- Happier? Why would that be suspicious.
-		[signal arg="consume_energy"]
-		gossip: She’s been miserable for years, stuck with that drunk. Suddenly she’s all smiles? Something doesn’t add up.
-		[wait time="0.1"]
-		- What do you mean? Elaborate.
-			[signal arg="consume_energy"]
-			gossip: Alright. Alright. There had been rumors of her being in an affair with someone. Problem is, we’ve never seen who. That’s all.
-			[signal arg="exit_dialog"]
-		- Thanks. Your information was helpful.
-			[signal arg="exit_dialog"]
-	- Was she not happy with her marriage?
-		[signal arg="consume_energy"]
-		gossip: Well she used to be happy in the early years. Then maybe she realized just how much of a heavy drinker the chief is. Must’ve been a hidden ick of hers
-		[signal arg="exit_dialog"]
-	- Thanks.
-		[signal arg="exit_dialog"]
-- Was she at home the night of the murder?
 	[signal arg="consume_energy"]
+	[wait time="0.1"]
+	- Happier? Why would that be suspicious. [-1 conversations]
+		gossip: She’s been miserable for years, stuck with that drunk. Suddenly she’s all smiles? Something doesn’t add up.
+		[signal arg="consume_energy"]
+		[wait time="0.1"]
+		- What do you mean? Elaborate. [-1 conversations]
+			gossip: Alright. Alright. There had been rumors of her being in an affair with someone. Problem is, we’ve never seen who. That’s all.
+			[signal arg="consume_energy"]
+		- Thanks. Your information was helpful.
+	- Was she not happy with her marriage? [-1 conversations]
+		gossip: Well she used to be happy in the early years. Then maybe she realized just how much of a heavy drinker the chief is. Must’ve been a hidden ick of hers
+		[signal arg="consume_energy"]
+	- Thanks.
+- Was she at home the night of the murder? [-1 conversations]
 	gossip: No, and that’s the strangest part. She’s always home at night, except that one.
-	[signal arg="exit_dialog"]
+	[signal arg="consume_energy"]
 - Nevermind.
 [signal arg="exit_dialog"]

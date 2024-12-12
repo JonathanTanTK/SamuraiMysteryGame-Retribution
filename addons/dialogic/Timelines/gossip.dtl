@@ -1,31 +1,31 @@
 gossip: Ah, a new face! You must be here about the elder’s death. Such a scandal, isn’t it?
 [wait time="0.1"]
-- What do you know about the murder?
-	[signal arg="consume_energy"]
+- What do you know about the murder? [-1 conversations]
 	gossip: Not much, dear. But I did hear the elder and his wife had argued a lot before his death. She’s such a strict woman, always nagging about his drinking.
+	[signal arg="consume_energy"]
 	[wait time="0.1"]
-	- Do you know anything else about his wife?
-		[signal arg="consume_energy"]
-		gossip: Despite her strictness, she is kind to everyone else. Always cooking dishes that she shares with the people of the village. Though, it doesn’t taste as good as it looks. 
-		gossip: I bet you could die from food poisoning if you eat a bowl full of her dishes! 
+	- Do you know anything else about his wife? [-1 conversations]
+		gossip: Despite her strictness, she is kind to everyone else. Always cooking dishes that she shares with the people of the village. Though, it doesn’t taste as good as it looks.
+		gossip: I bet you could die from food poisoning if you eat a bowl full of her dishes!
 		gossip: [ giggles ]
-	- Why does she complain about his drinking?
 		[signal arg="consume_energy"]
+	- Why does she complain about his drinking? [-1 conversations]
 		gossip: Might be because of his heavy drinking tendencies. But just let the man drink, woman. These days, that’s the only thing keeping people sane around here.
+		[signal arg="consume_energy"]
 	- Thank you ma'am.
-- Did you see or hear anything suspicious that night?
-	[signal arg="consume_energy"]
+- Did you see or hear anything suspicious that night? [-1 conversations]
 	gossip: Nothing out of the ordinary, though I did notice my stomachache medicine was missing that morning. Odd, isn’t it?
-	[wait time="0.1"]
-	- Why would someone steal stomachache medicine?
-		[signal arg="consume_energy"]
-		gossip: Beats me! Maybe someone had a rough night. The elder’s wife could’ve used it after eating her own cooking!
-	- Why is the stomacheache medicine so important to you?
-		[signal arg="consume_energy"]
-		gossip: Oh I don’t know, perhaps to save myself after eating the chief’s wife’s cooking! I can’t just say no to her kindness right?
-	- Thank you ma'am.
-- Is gossipping about people the only thing you do everyday
 	[signal arg="consume_energy"]
+	[wait time="0.1"]
+	- Why would someone steal stomachache medicine? [-1 conversations]
+		gossip: Beats me! Maybe someone had a rough night. The elder’s wife could’ve used it after eating her own cooking!
+		[signal arg="consume_energy"]
+	- Why is the stomacheache medicine so important to you? [-1 conversations]
+		gossip: Oh I don’t know, perhaps to save myself after eating the chief’s wife’s cooking! I can’t just say no to her kindness right?
+		[signal arg="consume_energy"]
+	- Thank you ma'am.
+- Is gossipping about people the only thing you do everyday [-1 conversations]
 	gossip: Wouldn’t that be fun! But no dear, I got better things to do of course. Now run along if you don’t want any tea!
+	[signal arg="consume_energy"]
 - [This is pointless]
 [signal arg="exit_dialog"]

@@ -27,8 +27,10 @@ player_detective: I have weighed the evidence. This is the truth as I see it. Ju
 [wait time="1.0"]
 [signal arg="last_scene"]
 [ Suddenly, the candles flicker violently as if caught in an invisible wind. The room plunges into complete darkness. ]
-[wait time="10.0"]
+[wait time="2.0"]
 Judge: (rising, voice trembling) "What… What has happened? Where are the three suspects?!"
 [wait time="5.0"]
 The End?
-[signal arg="exit_dialog"]
+Do you think you accused the right one?
+[wait time="1.0"]
+[signal arg="end_game"]

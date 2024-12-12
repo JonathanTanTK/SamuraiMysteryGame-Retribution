@@ -1,18 +1,15 @@
 priest: Your time here draws to a close. Have you found peace?
 [wait time="0.1"]
-- Do you know anything that could help me?
-	[signal arg="consume_energy"]
+- Do you know anything that could help me? [-1 conversations]
 	priest: I only know of the unfortunate death of that misguided young man that spends all of his time in the bar. Such a shame. May his soul rest in peace.
-	[wait time="0.1"]
-	- Why would someone kill the drunkard?
-		[signal arg="consume_energy"]
-		priest: Perhaps he knew too much. Or perhaps he was simply unlucky.
-		[signal arg="exit_dialog"]
-	- Farewell, Priest.
-		[signal arg="exit_dialog"]
-- Do you suspect anyone?
 	[signal arg="consume_energy"]
+	[wait time="0.1"]
+	- Why would someone kill the drunkard? [-1 conversations]
+		priest: Perhaps he knew too much. Or perhaps he was simply unlucky.
+		[signal arg="consume_energy"]
+	- Farewell, Priest.
+- Do you suspect anyone? [-1 conversations]
 	priest: Judgment is not mine to pass. Only the Gods know the truth.
-	[signal arg="exit_dialog"]
+	[signal arg="consume_energy"]
 - Farewell, Priest.
 [signal arg="exit_dialog"]

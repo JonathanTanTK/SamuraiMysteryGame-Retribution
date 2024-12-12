@@ -1,36 +1,29 @@
 priest: Peace be with you, traveler. What brings you to our quiet village?
 [wait time="0.1"]
-- I’m investigating the chief’s murder. Do you have any insights?
-	[signal arg="consume_energy"]
+- I’m investigating the chief’s murder. Do you have any insights? [-1 conversations]
 	priest: I saw the elder leave the bar earlier than the others that night, walking hurriedly towards the town hall. He seemed… troubled.
+	[signal arg="consume_energy"]
 	[wait time="0.1"]
-	- Do you know what had been troubling him?
-		[signal arg="consume_energy"]
+	- Do you know what had been troubling him? [-1 conversations]
 		priest: I rarely ever converse with him at all actually. I apologize.
-		[signal arg="exit_dialog"]
-	- Did you talk to him at all at that moment?
 		[signal arg="consume_energy"]
+	- Did you talk to him at all at that moment? [-1 conversations]
 		priest: No, I only saw a glimpse of him.
-		[signal arg="exit_dialog"]
+		[signal arg="consume_energy"]
 	- Thank you.
-		[signal arg="exit_dialog"]
-- Was anyone with him when he left the bar?
-	[signal arg="consume_energy"]
+- Was anyone with him when he left the bar? [-1 conversations]
 	priest: Not that I saw. Oddly enough the Samurai wasn’t with him because normally he is always seen by his side. Come to think of it, the samurai has been acting… different lately…
-	[wait time="0.1"]
-	- What do you mean different?
-		[signal arg="consume_energy"]
-		priest: He came to me recently, claiming he’d given up drinking and wants to repent. A noble endeavor, if true. Cause he had always been known as a heavy drinker.
-		[signal arg="exit_dialog"]
-	- Is it that important to have a samurai always at his side?
-		[signal arg="consume_energy"]
-		priest: I think he does see himself as someone important
-		[signal arg="exit_dialog"]
-	- Thank you.
-		[signal arg="exit_dialog"]
-- Is the chief a religious man?
 	[signal arg="consume_energy"]
+	[wait time="0.1"]
+	- What do you mean different? [-1 conversations]
+		priest: He came to me recently, claiming he’d given up drinking and wants to repent. A noble endeavor, if true. Cause he had always been known as a heavy drinker.
+		[signal arg="consume_energy"]
+	- Is it that important to have a samurai always at his side? [-1 conversations]
+		priest: I think he does see himself as someone important
+		[signal arg="consume_energy"]
+	- Thank you.
+- Is the chief a religious man? [-1 conversations]
 	priest: Are you religious yourself, young man? It is wise to reflect on ourselves first before judging others. If it helps, I don’t believe this has anything to do with religion.
-	[signal arg="exit_dialog"]
+	[signal arg="consume_energy"]
 - This is pointless.
-	[signal arg="exit_dialog"]
+[signal arg="exit_dialog"]

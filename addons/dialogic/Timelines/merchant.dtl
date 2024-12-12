@@ -1,35 +1,37 @@
 merchant: A stranger inquiring about me?  Preposterous! What do you want? I’ll have you know that my business practices have been clean and I couldn’t care less about this case!
 [wait time="0.1"]
-- What was your relationship with the elder?
-	[signal arg="consume_energy"]
+- What was your relationship with the elder? [-1 conversations]
 	merchant: We had our differences, but that’s ancient history. I’m a successful man now. Why would I bother with the past?
-	[wait time="0.1"]
-	- Are you sure it’s in the past?
-		[The merchant looks fidgety, tapping his fingers together]
-		merchant: Must I remind you? Why would I kill him for money when I already have all the money to keep myself happy for multiple lifetimes now! 
-		[wait time="0.1"]
-		- So are you happy now with your wealth?
-			[signal arg="consume_energy"]
-			merchant: O-of course I am! What more can I want with all this money! Though to be honest, all of this money can’t get me a wife as beautiful as the chief’s wife. Such a shame. 
-			merchant: But mark my words, I won’t ever resort to infidelity!  A wealthy businessman like myself has standards!
-		- Thank you then.
-	- What kind of differences did you have with him?
-		[signal arg="consume_energy"]
-		merchant: I’m afraid those are private matters. Now leave! 
-	- [This is pointless]
-- Did you see the elder on the night of his death?
-	merchant: Not at all. I was at home, counting my earnings. You don’t get this wealthy by wasting time at the bar.
-	[wait time="0.1"]
-	- Are you lying?
-		[signal arg="consume_energy"]
-		merchant:  Lying? Why would I lie?!
-	- What’s your business anyways?
-		[signal arg="consume_energy"]
-		merchant: Everything! But you won’t find any dirt on my business practices, believe me!
-	- Thank you then.
-- Some say you might’ve held a grudge against him.
 	[signal arg="consume_energy"]
+	[wait time="0.1"]
+	- Are you sure it’s in the past? [-1 conversations]
+		[The merchant looks fidgety, tapping his fingers together]
+		merchant: Must I remind you? Why would I kill him for money when I already have all the money to keep myself happy for multiple lifetimes now!
+		[signal arg="consume_energy"]
+		[wait time="0.1"]
+		- So are you happy now with your wealth? [-1 conversations]
+			merchant: O-of course I am! What more can I want with all this money! Though to be honest, all of this money can’t get me a wife as beautiful as the chief’s wife. Such a shame.
+			merchant: But mark my words, I won’t ever resort to infidelity!  A wealthy businessman like myself has standards!
+			[signal arg="consume_energy"]
+		- Thank you then.
+	- What kind of differences did you have with him? [-1 conversations]
+		merchant: I’m afraid those are private matters. Now leave!
+		[signal arg="consume_energy"]
+	- [This is pointless]
+- Did you see the elder on the night of his death? [-1 conversations]
+	merchant: Not at all. I was at home, counting my earnings. You don’t get this wealthy by wasting time at the bar.
+	[signal arg="consume_energy"]
+	[wait time="0.1"]
+	- Are you lying? [-1 conversations]
+		merchant: Lying? Why would I lie?!
+		[signal arg="consume_energy"]
+	- What’s your business anyways? [-1 conversations]
+		merchant: Everything! But you won’t find any dirt on my business practices, believe me!
+		[signal arg="consume_energy"]
+	- Thank you then.
+- Some say you might’ve held a grudge against him. [-1 conversations]
 	merchant: [ Averts his eyes ]
 	merchant: A grudge? Ha! If I wanted revenge, why wait? Besides, I have better things to do.
+	[signal arg="consume_energy"]
 - [This is pointless]
 [signal arg="exit_dialog"]

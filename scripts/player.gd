@@ -18,7 +18,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	convo.text = "Conversations: " + str(DayManager.conversations)
+	if (DayManager.day != 3): 
+		convo.text = "Conversations: " + str(DayManager.conversations)
+	else:
+		convo.text = ""
 	pass
 
 func _physics_process(delta: float) -> void:
@@ -43,3 +46,6 @@ func dialogic_signal(arg: String):
 		if arg == "last_scene":
 			FadeTransition.fade_and_reload_deathscene()
 			get_tree().change_scene_to_file("res://scenes/death.tscn")
+		if arg == "end_game":
+			FadeTransition.fade_and_reload_scene()
+			get_tree().change_scene_to_file("res://root.tscn")

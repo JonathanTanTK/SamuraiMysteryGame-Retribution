@@ -1,24 +1,20 @@
 priest: Peace be with you, traveler. Have you come for guidance again?
 [wait time="0.1"]
-- Do you have anything you might’ve missed about the murder?
-	[signal arg="consume_energy"]
+- Do you have anything you might’ve missed about the murder? [-1 conversations]
 	priest: The Gods reveal truth in their own time, not at my will.
-	[wait time="0.1"]
-	- You’re not being very helpful.
-		[signal arg="consume_energy"]
-		priest: Perhaps the answers you seek lie within yourself.
-		[signal arg="exit_dialog"]
-	- I'll look elsewhere for answers.
-		[signal arg="exit_dialog"]
-- What do you think of the suspects?
 	[signal arg="consume_energy"]
-	priest: Suspicion clouds judgment. Pray for clarity instead.
 	[wait time="0.1"]
-	- You’re not being very helpful.
-		[signal arg="consume_energy"]
+	- You’re not being very helpful. [-1 conversations]
 		priest: Perhaps the answers you seek lie within yourself.
-		[signal arg="exit_dialog"]
+		[signal arg="consume_energy"]
+	- I'll look elsewhere for answers.
+- What do you think of the suspects? [-1 conversations]
+	priest: Suspicion clouds judgment. Pray for clarity instead.
+	[signal arg="consume_energy"]
+	[wait time="0.1"]
+	- You’re not being very helpful. [-1 conversations]
+		priest: Perhaps the answers you seek lie within yourself.
+		[signal arg="consume_energy"]
 	- I’ll look elsewhere for answers.
-		[signal arg="exit_dialog"]
 - I’ll look elsewhere for answers.
 [signal arg="exit_dialog"]

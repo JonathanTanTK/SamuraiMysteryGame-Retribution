@@ -1,21 +1,18 @@
 bar_owner: This investigation of yours is reaching its climax. Don’t forget, tonight is the trial for the three suspects.
 [wait time="0.1"]
-- Anything new on your end perhaps?
-	[signal arg="consume_energy"]
+- Anything new on your end perhaps? [-1 conversations]
 	bar_owner: Not much. Although the drunkard isn’t here like usual. Kinda strange if you ask me. He’s always around the bar. Maybe something happened to him. Who knows.
-	[signal arg="exit_dialog"]
-- Did the samurai ever act suspicious before the murder?
 	[signal arg="consume_energy"]
+- Did the samurai ever act suspicious before the murder? [-1 conversations]
 	bar_owner: Funny you ask. He came here two days before the murder, drinking heavily for the first time in weeks while crying a bit I think. Something was clearly on his mind.
-	[wait time="0.1"]
-	- Did he say anything?
-		[signal arg="consume_energy"]
-		bar_owner: I tried asking him why he suddenly stopped becoming a regular. He just said that it was due to health reasons and told me to leave him alone as he continued to drown his sorrows.
-	- Thanks.
-		[signal arg="exit_dialog"]
-- Do you think the wife is involved?
 	[signal arg="consume_energy"]
+	[wait time="0.1"]
+	- Did he say anything? [-1 conversations]
+		bar_owner: I tried asking him why he suddenly stopped becoming a regular. He just said that it was due to health reasons and told me to leave him alone as he continued to drown his sorrows.
+		[signal arg="consume_energy"]
+	- Thanks.
+- Do you think the wife is involved? [-1 conversations]
 	bar_owner: I don’t know her well, but people change when pushed too far.
-	[signal arg="exit_dialog"]
+	[signal arg="consume_energy"]
 - Thanks for your help.
 [signal arg="exit_dialog"]

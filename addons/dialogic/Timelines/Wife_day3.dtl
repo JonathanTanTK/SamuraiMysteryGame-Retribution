@@ -1,32 +1,26 @@
 Wife: "I hear you’ve been asking questions about my husband’s death. I loved him so much and it’s not fair what happened to my beloved husband. What do you want to know?
 [wait time="0.1"]
-- Where were you the night of the murder?
-	[signal arg="consume_energy"]
+- Where were you the night of the murder? [-1 conversations]
 	Wife: A-at home, like always. I never leave at night. E-everyone knows t-that.
+	[signal arg="consume_energy"]
 	[wait time="0.1"]
-	- Are you sure?
-		[signal arg="consume_energy"]
+	- Are you sure? [-1 conversations]
 		Wife: Yes I am!
-		[signal arg="exit_dialog"]
+		[signal arg="consume_energy"]
 	- Hmm.
-		[signal arg="exit_dialog"]
-- The gossiper says you’ve been happier lately. Why is that?
-	[signal arg="consume_energy"]
+- The gossiper says you’ve been happier lately. Why is that? [-1 conversations]
 	Wife: Can’t a woman smile without suspicion? Life is hard, but I find moments of joy where I can. Hmph.
-	[wait time="0.1"]
-	- Is it because of an affair you’ve been having?
-		[signal arg="consume_energy"]
-		Wife: How dare you accuse me of that! I’ll have you know that I am a woman with standards and I loved him very much!
-		[signal arg="exit_dialog"]
-	- Was there anything you disliked about your late husband?
-		[signal arg="consume_energy"]
-		Wife: He wasn’t a perfect man but I accepted that when I got married to him. He just drinks a lot and I couldn’t stand that side of him. But oh what I would give to the world for him to still be alive and by my side. *cries*
-		[signal arg="exit_dialog"]
-	- Thank you. I will see you later at court.
-		[signal arg="exit_dialog"]
-- Did you poison the samurai’s food?
 	[signal arg="consume_energy"]
+	[wait time="0.1"]
+	- Is it because of an affair you’ve been having? [-1 conversations]
+		Wife: How dare you accuse me of that! I’ll have you know that I am a woman with standards and I loved him very much!
+		[signal arg="consume_energy"]
+	- Was there anything you disliked about your late husband? [-1 conversations]
+		Wife: He wasn’t a perfect man but I accepted that when I got married to him. He just drinks a lot and I couldn’t stand that side of him. But oh what I would give to the world for him to still be alive and by my side. *cries*
+		[signal arg="consume_energy"]
+	- Thank you. I will see you later at court.
+- Did you poison the samurai’s food? [-1 conversations]
 	Wife: Absolutely not! I share my cooking with many in the village. If it was spoiled, it was an accident.
-	[signal arg="exit_dialog"]
+	[signal arg="consume_energy"]
 - I’ll leave you be for now.
 [signal arg="exit_dialog"]

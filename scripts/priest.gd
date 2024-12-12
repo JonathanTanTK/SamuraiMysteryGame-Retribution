@@ -12,7 +12,7 @@ func _on_interact():
 	elif (DayManager.day == 1):
 		Dialogic.start("priest_day2")
 	elif (DayManager.day == 2):
-		Dialogic.start("priest_day3")
+		Dialogic.start("Priest_day3")
 
 
 func dialogic_signal(arg: String):

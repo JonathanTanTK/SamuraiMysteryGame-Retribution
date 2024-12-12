@@ -1,22 +1,18 @@
 Samurai: What do you want, Ronin? I’ve said all there is to say to everyone. I’ve failed my master.
 [wait time="0.1"]
-- Where were you the night of the murder?
-	[signal arg="consume_energy"]
+- Where were you the night of the murder? [-1 conversations]
 	Samurai: At home, sick from some bad food. The elder’s wife’s cooking, if you must know.
+	[signal arg="consume_energy"]
 	[wait time="0.1"]
-	- Why is her cooking so bad?
-		[signal arg="consume_energy"]
+	- Why is her cooking so bad? [-1 conversations]
 		Samurai: I don’t know. I’m surprised the chief had survived that long on her cooking. But she’s kind enough to share food to those whoever she meets, regardless of how edible it is.
-		[signal arg="exit_dialog"]
+		[signal arg="consume_energy"]
 	- Thank you
-		[signal arg="exit_dialog"]
-- Did the chief had any enemies?
-	[signal arg="consume_energy"]
+- Did the chief had any enemies? [-1 conversations]
 	Samurai: He wasn’t always a kind man. Before becoming chief, he was a landlord who wronged many. That’s all that I can say.
-	[signal arg="exit_dialog"]
-- Why did you stop drinking?
 	[signal arg="consume_energy"]
+- Why did you stop drinking? [-1 conversations]
 	Samurai: Personal reasons. You wouldn’t understand. Now leave me be. I am currently ashamed enough of everything.
-	[signal arg="exit_dialog"]
+	[signal arg="consume_energy"]
 - I’ll leave you be.
 [signal arg="exit_dialog"]
