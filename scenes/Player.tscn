@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bccel1i5pgqhh"]
+[gd_scene load_steps=6 format=3 uid="uid://bccel1i5pgqhh"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_7odm3"]
 [ext_resource type="Texture2D" uid="uid://dqolypp6um125" path="res://Main Characters/ronin.png" id="2_5mvac"]
+[ext_resource type="Theme" path="res://addons/dialogic/Editor/Theme/PickerTheme.tres" id="3_5yd84"]
+[ext_resource type="FontFile" uid="uid://cc4xli25271fd" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Bold.ttf" id="4_g6tw8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgqj3"]
 size = Vector2(12.8827, 22.8111)
@@ -23,3 +25,17 @@ shape = SubResource("RectangleShape2D_cgqj3")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-0.25, -30.75)
 zoom = Vector2(3, 2)
+
+[node name="Conversations" type="Label" parent="Camera2D"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -23.75
+offset_top = -31.25
+offset_right = 105.25
+offset_bottom = -8.25
+grow_horizontal = 0
+scale = Vector2(-0.3, 0.3)
+theme = ExtResource("3_5yd84")
+theme_override_fonts/font = ExtResource("4_g6tw8")
+text = "Conversations: 0"
